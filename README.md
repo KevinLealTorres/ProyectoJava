@@ -5,7 +5,7 @@
 ### Requisitos:
 - Tener Java 11 o posterior
 - Tener Git (para clonar este repositorio)
-- Tener IntelliJ IDEA
+- Tener IntelliJ IDEA (Community o el de paga)
 
 ### Instalación:
 1. Clonar este repositorio mediante el comando:
@@ -24,11 +24,40 @@ git clone https://github.com/KevinLealTorres/ProyectoJava.git
 ### Configuración:
 La configuración es minima, ya que sólo se necesita del IDE IntelliJ IDEA
 
-## Uso del programa.
+## estructura del proyecto.
 
-El archivo Main.java es el archivo principal de ejecución, donde se ejecutará todo el programa.
+Los archivos y carpetas que viene por defecto de IntelliJ no serán nombrados, sino solamente lo que sirven para
+la evidencia:
 
-Su uso es para el sistema de administración de citas
+### pseudocódigo:
+Esta carpeta contiene todas clases, interfaces y el punto de entrada para que funcione el proyecto, todo está
+en .txt, los archivos son:
+
+| Clase               | Observación      |
+|---------------------|------------------|
+| Administrador.txt   |                  |
+| Calendario.txt      | Singleton        |
+| Cita.txt            |                  |
+| Doctor.txt          |                  |
+| Especialidad.txt    | Interfaz         |
+| Main.txt            | Punto de entrada |
+| Paciente.txt        |                  |
+
+### diagrams:
+Aquí están los diagramas y el editable en StarUML para el diseño del programa
+
+Los diagramas son estos:
+
+![Clase Main](./diagrams/Clase-main.jpg)
+
+
+![Flujo de datos para agendar cita](./diagrams/FlujoDeDatos-agendarCita.jpg)
+
+
+![Flujo de datos para dar de alta un doctor](./diagrams/FlujoDeDatos-DarAltaDoctor.jpg)
+
+
+![Flujo de datos para dar de alta un paciente](./diagrams/FlujoDeDatos-DarAltaPaciente.jpg)
 
 ## Créditos
 
