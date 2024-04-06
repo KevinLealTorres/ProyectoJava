@@ -1,4 +1,5 @@
 import Paciente.txt;
+import Doctor.txt;
 
 class Cita {
   String id;
