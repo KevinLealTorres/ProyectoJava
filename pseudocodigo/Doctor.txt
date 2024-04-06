@@ -1,0 +1,14 @@
+import Cita.txt;
+import Persona.txt;
+import Especialidad.txt;
+
+class Doctor extends Persona {
+  Especialidad especialidad;
+  List<Cita> citas;
+
+  Doctor(String id, String nombre, Especialidad especialidad) {
+    this.id = id;
+    this.nombre = nombre;
+    this.especialidad = especialidad;
+    this.citas = new List<Cita>();
+  }

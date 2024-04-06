@@ -1,0 +1,12 @@
+import Persona.txt;
+import Doctor.txt;
+import Paciente.txt;
+import Cita.txt;
+
+class Administrador extends Persona {
+  String contraseña;
+  void darAltaDoctor(Doctor doctor);
+  void darAltaPaciente(Paciente paciente);
+  void agendarCita(Cita cita);
+  void verCalendario();
+}

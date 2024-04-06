@@ -1,0 +1,43 @@
+import Cita.txt;
+
+class Calendario {
+  // La instancia única de Calendario
+  private static Calendario instancia = null;
+
+  private List<Cita> citas;
+
+  private Calendario() {
+    citas = new List<Cita>();
+  }
+
+  // Método público estático para obtener la instancia de Calendario
+  public static Calendario obtenerInstancia() {
+    if (instancia == null) {
+      instancia = new Calendario();
+    }
+    return instancia;
+  }
+
+  void eliminarCita(String idCita) {
+    Cita citaAEliminar = null;
+    for (Cita cita : citas) {
+      if (cita.id.equals(idCita)) {
+        citaAEliminar = cita;
+        break;
+      }
+    }
+    if (citaAEliminar != null) {
+      citas.remove(citaAEliminar);
+      mostrarMensaje("Cita eliminada del calendario.");
+    } else {
+      mostrarMensaje("Cita no encontrada en el calendario.");
+    }
+  }
+
+  // Método para exportar las citas a un archivo JSON
+  void exportarAJSON() {
+    File citasJSON = new File("./citas.json");
+    citasJSON.append(citas);
+    mostrarMensaje("Listo, las citas quedaron registradas en citas.json")
+  }
+}

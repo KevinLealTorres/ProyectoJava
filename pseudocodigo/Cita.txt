@@ -1,0 +1,9 @@
+import Paciente.txt;
+
+class Cita {
+  String id;
+  DateTime fechaHora;
+  String motivo;
+  Doctor doctor;
+  Paciente paciente;
+}

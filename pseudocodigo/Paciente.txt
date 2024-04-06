@@ -1,0 +1,9 @@
+import Cita.txt;
+
+class Paciente extends Persona {
+  Cita cita;
+
+  Paciente(Cita cita = null) {
+  this.cita = cita;
+  }
+}

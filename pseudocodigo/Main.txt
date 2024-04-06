@@ -1,0 +1,94 @@
+import Administrador.txt
+import Calendario.txt
+import Cita.txt
+import Doctor.txt
+import Especialidad.txt
+import Paciente.txt
+
+
+// Punto de entrada principal
+function menuPrincipal() {
+  mostrarMensaje("Bienvenido al Sistema de Gestión de Citas Médicas");
+  mostrarMensaje("Seleccione una opción:");
+  mostrarMensaje("1. Iniciar Sesión");
+  mostrarMensaje("2. Ver Calendario de Citas");
+  mostrarMensaje("3. Salir");
+
+  opcion = obtenerEntradaUsuario();
+
+  switch(opcion) {
+    case "1":
+      if (inicioSesion()) {
+        mostrarMenuUsuario();
+      }
+      break;
+    case "2":
+      verCalendarioPublico();
+      break;
+    case "3":
+      salirDelSistema();
+      break;
+    default:
+      mostrarMensaje("Opción no válida, por favor intente de nuevo.");
+      break;
+  }
+  // Si la opción no fue salir, vuelve a mostrar el menú principal
+  if (opcion != "3") {
+    menuPrincipal();
+  }
+}
+
+function mostrarMenuUsuario() {
+  mostrarMensaje("Menú de Usuario - Seleccione una opción:");
+  mostrarMensaje("1. Agendar Cita");
+  mostrarMensaje("2. Dar de Alta Paciente");
+  mostrarMensaje("3. Dar de Alta Doctor");
+  mostrarMensaje("4. Ver Calendario de Citas");
+  mostrarMensaje("5. Cerrar Sesión");
+
+  opcion = obtenerEntradaUsuario();
+}
+
+function inicioSesion() {
+  mostrarMensaje("Por favor, introduzca su nombre de usuario y contraseña.");
+  String usuario = obtenerEntradaUsuario("Nombre de usuario:");
+  String contraseña = obtenerEntradaUsuario("Contraseña:");
+
+  if (validarCredenciales(usuario, contraseña)) {
+    mostrarMensaje("Inicio de sesión exitoso.");
+    return true;
+  } else {
+    mostrarMensaje("Credenciales incorrectas, por favor intente de nuevo.");
+    return false;
+  }
+}
+
+function validarCredenciales(String usuario, String contraseña) {
+  if (existeUsuario(usuario) && contraseñaCorrecta(usuario, contraseña)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function existeUsuario(String usuario) {
+  Connection conn = new Connection("mysql", 8000, root, root);
+  try {
+  String result = conn.query("SELECT * FROM Usuarios WHERE usuario=" + usuario);
+  } catch (QueryException e) {
+    mostrarMensaje("Este usuario no existe o está mal escrito, vuelvalo a intentar")
+    return false;
+  }
+  return true;
+}
+
+function contraseñaCorrecta(String usuario, String contraseña) {
+    Connection conn = new Connection("mysql", 8000, root, root);
+    try {
+    String dbContraseña = conn.query("SELECT password FROM Usuarios WHERE usuario=" + usuario);
+    if(!dbContraseña.equals(contraseña)) {
+        mostrarMensaje("La contraseña no es correcta, intentalo de nuevo")
+        return false;
+    }
+    return true;
+}
