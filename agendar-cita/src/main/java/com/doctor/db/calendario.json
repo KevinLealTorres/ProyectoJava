@@ -1,0 +1,13 @@
+{
+  "citas": [
+    {
+      "id": "1",
+      "fechaHora": "2024-05-09T10:00",
+      "motivo": "Consulta general",
+      "doctor": {
+        "especialidad": "GENERAL"
+      },
+      "paciente": {}
+    }
+  ]
+}
