@@ -34,6 +34,29 @@ public class Calendario {
         }
     }
 
+    public Cita obtenerCitaPorId(String id) {
+        for (Cita cita : citas) {
+            if (cita.getId().equals(id)) {
+                return cita;
+            }
+        }
+        System.err.println("No existe, por tanto no se puede obtener");
+        return null;
+    }
+
+    public boolean actualizarCita(Cita nuevaCita) {
+        Cita citaExistente = obtenerCitaPorId(nuevaCita.getId());
+        if (citaExistente != null) {
+            citaExistente.setFechaHora(nuevaCita.getFechaHora());
+            citaExistente.setMotivo(nuevaCita.getMotivo());
+            citaExistente.setDoctor(nuevaCita.getDoctor());
+            citaExistente.setPaciente(nuevaCita.getPaciente());
+            return true; // Cita actualizada exitosamente
+        }
+        System.err.println("No se puede actualizar cita porque no existe");
+        return false;
+    }
+
     public static Calendario cargarDesdeJSON(String archivo) {
         Gson gson = new Gson();
         try (FileReader reader = new FileReader(archivo)) {

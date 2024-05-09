@@ -3,7 +3,11 @@ package com.doctor;
 public class Doctor extends Persona {
 	private Especialidades especialidad;
 
-	// Constructor, getters y setters
+	// Constructor vacío
+	public Doctor() {
+	}
+
+	// Constructor completo
 	public Doctor(String id, String nombre, Especialidades especialidad) {
 		super(id, nombre);
 		this.especialidad = especialidad;

@@ -8,7 +8,8 @@ public class Cita {
     private Doctor doctor;
     private Paciente paciente;
 
-    // Constructor, getters y setters
+    public Cita(){}
+
     public Cita(String id, String fechaHora, String motivo, Doctor doctor, Paciente paciente) {
         this.id = id;
         this.fechaHora = fechaHora;
@@ -55,5 +56,14 @@ public class Cita {
 
     public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
+    }
+
+    @Override
+    public String toString() {
+        return  "Cita ID: " + getId() +
+                "Fecha y Hora: " + getFechaHora() +
+                "Motivo: " + getMotivo() +
+                "Doctor: " + getDoctor().getNombre() +
+                "Paciente: " + getPaciente().getNombre();
     }
 }

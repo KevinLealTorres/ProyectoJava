@@ -11,7 +11,6 @@ public class Main {
 
         Cita cita = new Cita("1", "2022-06-09T10:00", "Consulta generalisima", doctor, paciente);
         calendario.agregarCita(cita);
-
         calendario.exportarAJSON(ARCHIVO_JSON);
     }
 }
