@@ -1,3 +1,4 @@
+package com.doctor;
 public class Paciente extends Persona {
 		private Cita cita;
 

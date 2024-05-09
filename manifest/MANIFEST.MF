@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: com.citasweb.Main
-Class-Path: lib/dependencia1.jar lib/dependencia2.jar
-

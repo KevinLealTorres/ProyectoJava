@@ -1,3 +1,4 @@
+package com.doctor;
 public enum Especialidades {
 		GENERAL,
 		INTERNISTA,

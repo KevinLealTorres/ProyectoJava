@@ -1,9 +1,10 @@
+package com.doctor;
 public class Administrador extends Persona {
 		private String contrasena;
 
 		public Administrador(String id, String nombre, String contrasena) throws Exception {
 				super(id, nombre);
-				if(contrasena.length < 4) throw new Exception("Tu contraseña debe tener 4 caracteres o mas");
+				if(contrasena.length() < 4) throw new Exception("Tu contraseña debe tener 4 caracteres o mas");
 				this.contrasena = contrasena;
 		}
 
