@@ -20,6 +20,10 @@ git clone https://github.com/KevinLealTorres/ProyectoJava.git
 
 4. Seleccionar la carpeta del proyecto
 
+5. Ejecutar el comando:
+```bash
+mvn package
+```
 
 ### Configuración:
 La configuración es minima, ya que sólo se necesita del IDE IntelliJ IDEA
@@ -48,16 +52,16 @@ Aquí están los diagramas y el editable en StarUML para el diseño del programa
 
 Los diagramas son estos:
 
-![Clase Main](./diagrams/Clase-main.jpg)
+![Clase Main](agendar-cita/src/resources/diagrams/Clase-main.jpg)
 
 
-![Flujo de datos para agendar cita](./diagrams/FlujoDeDatos-agendarCita.jpg)
+![Flujo de datos para agendar cita](agendar-cita/src/resources/diagrams/FlujoDeDatos-agendarCita.jpg)
 
 
-![Flujo de datos para dar de alta un doctor](./diagrams/FlujoDeDatos-DarAltaDoctor.jpg)
+![Flujo de datos para dar de alta un doctor](agendar-citas/src/resources/diagrams/FlujoDeDatos-DarAltaDoctor.jpg)
 
 
-![Flujo de datos para dar de alta un paciente](./diagrams/FlujoDeDatos-DarAltaPaciente.jpg)
+![Flujo de datos para dar de alta un paciente](agendar-citas/src/resources/diagrams/FlujoDeDatos-DarAltaPaciente.jpg)
 
 ## Créditos
 
