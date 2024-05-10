@@ -1,17 +1,16 @@
-package com.doctor; 
-import java.util.Scanner;
+package com.doctor;
 
 public class Main {
-	public static void main(String... args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("""
-				Agendador de citas:
-				1) Agendar cita:
-				2) Dar de alta doctor
-				3) Dar de alta paciente
-				>>>\s""");
+    private static final String ARCHIVO_JSON = "src/main/java/com/doctor/db/calendario.json";
 
-		
-		sc.close();	
-	}
+    public static void main(String[] args) {
+        Calendario calendario = Calendario.cargarDesdeJSON(ARCHIVO_JSON);
+
+        Doctor doctor = new Doctor("1", "Dr. Smith", Especialidades.GENERAL);
+        Paciente paciente = new Paciente("1", "John Doe");
+
+        Cita cita = new Cita("1", "2022-06-09T10:00", "Consulta generalisima", doctor, paciente);
+        calendario.agregarCita(cita);
+        calendario.exportarAJSON(ARCHIVO_JSON);
+    }
 }

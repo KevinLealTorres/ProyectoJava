@@ -1,10 +1,40 @@
 package com.doctor;
-public class Paciente extends Persona {
+public class Paciente {
 		private Cita cita;
+		private String id, nombre;
 
-		public Paciente(String id, String nombre, Cita cita) {
-				super(id, nombre);
-				this.cita = cita;
-
+		public Paciente(String id, String nombre) {
+			this.id = id;
+			this.nombre = nombre;
 		}
+
+		public Paciente(){}
+
+	public Cita getCita() { return cita; }
+	public void setCita(Cita cita) { this.cita = cita; }
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	@Override
+	public String toString() {
+		return """
+				Paciente: %s
+				Id: %s
+				Citas: %s
+				""".formatted(getNombre(), getId(), cita.toString());
+	}
 }
