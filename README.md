@@ -3,9 +3,9 @@
 ## Instalación y configuración.
 
 ### Requisitos:
-- Tener Java 11 o posterior
-- Tener Git (para clonar este repositorio)
-- Tener IntelliJ IDEA (Community o el de paga)
+- Java 18 o posterior
+- IntelliJ IDEA (Community o el de paga)
+- Maven
 
 ### Instalación:
 1. Clonar este repositorio mediante el comando:
@@ -20,18 +20,51 @@ git clone https://github.com/KevinLealTorres/ProyectoJava.git
 
 4. Seleccionar la carpeta del proyecto
 
-5. Ejecutar el comando:
-```bash
-mvn package
-```
 
 ### Configuración:
-La configuración es minima, ya que sólo se necesita del IDE IntelliJ IDEA
+1. Refrescar las dependencias para que se importen de Maven Central
+2. Construir el proyecto
+3. Ejecutar el punto de entrada: Main.main
 
 ## estructura del proyecto.
 
 Los archivos y carpetas que viene por defecto de IntelliJ no serán nombrados, sino solamente lo que sirven para
 la evidencia:
+
+### Arbol de directorios:
+
+ProyectoJava/
+└── agendar-cita
+    ├── src
+    │   ├── main
+    │   │   └── java
+    │   │       └── com
+    │   │           └── doctor
+    │   │               └── db
+    │   ├── resources
+    │   │   ├── diagrams
+    │   │   └── pseudocodigo
+    │   └── test
+    │       └── java
+    │           └── com
+    │               └── doctor
+    └── target
+        ├── classes
+        │   └── com
+        │       └── doctor
+        ├── generated-sources
+        │   └── annotations
+        ├── generated-test-sources
+        │   └── test-annotations
+        ├── maven-archiver
+        ├── maven-status
+        │   └── maven-compiler-plugin
+        │       ├── compile
+        │       │   └── default-compile
+        │       └── testCompile
+        │           └── default-testCompile
+        └── test-classes
+
 
 ### pseudocódigo:
 Esta carpeta contiene todas clases, interfaces y el punto de entrada para que funcione el proyecto, todo está
@@ -40,7 +73,7 @@ en .txt, los archivos son:
 | Clase               | Observación      |
 |---------------------|------------------|
 | Administrador.txt   |                  |
-| Calendario.txt      | Singleton        |
+| Calendario.txt      |                  |
 | Cita.txt            |                  |
 | Doctor.txt          |                  |
 | Especialidad.txt    | Interfaz         |
@@ -67,9 +100,12 @@ Los diagramas son estos:
 
 Programador Java: Kevin Alejandro Leal Torres
 
+Apoyo moral: Kevin Alejandro Leal Torres
+
+Apoyo musical (escuchar su música mientras codificaba): Alfredo Olivas
+
 Ingeniero en requerimientos: Kevin Alejandro Leal Torres
 
 ## Licencia.
 
-Licencia MIT, [Licencia de este proyecto](./LICENSE)
-
+Licencia MIT: [Licencia de este proyecto](./LICENSE)
