@@ -32,39 +32,7 @@ Los archivos y carpetas que viene por defecto de IntelliJ no serán nombrados, s
 la evidencia:
 
 ### Arbol de directorios:
-<p>
-ProyectoJava/
-└── agendar-cita
-    ├── src
-    │   ├── main
-    │   │   └── java
-    │   │       └── com
-    │   │           └── doctor
-    │   │               └── db
-    │   ├── resources
-    │   │   ├── diagrams
-    │   │   └── pseudocodigo
-    │   └── test
-    │       └── java
-    │           └── com
-    │               └── doctor
-    └── target
-        ├── classes
-        │   └── com
-        │       └── doctor
-        ├── generated-sources
-        │   └── annotations
-        ├── generated-test-sources
-        │   └── test-annotations
-        ├── maven-archiver
-        ├── maven-status
-        │   └── maven-compiler-plugin
-        │       ├── compile
-        │       │   └── default-compile
-        │       └── testCompile
-        │           └── default-testCompile
-        └── test-classes
-</p>
+![Arbol de directorios](./agendar-cita/src/resources/arbol_directorios.png)
 
 ### pseudocódigo:
 Esta carpeta contiene todas clases, interfaces y el punto de entrada para que funcione el proyecto, todo está
