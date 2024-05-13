@@ -32,7 +32,7 @@ Los archivos y carpetas que viene por defecto de IntelliJ no serán nombrados, s
 la evidencia:
 
 ### Arbol de directorios:
-
+<p>
 ProyectoJava/
 └── agendar-cita
     ├── src
@@ -64,7 +64,7 @@ ProyectoJava/
         │       └── testCompile
         │           └── default-testCompile
         └── test-classes
-
+</p>
 
 ### pseudocódigo:
 Esta carpeta contiene todas clases, interfaces y el punto de entrada para que funcione el proyecto, todo está
