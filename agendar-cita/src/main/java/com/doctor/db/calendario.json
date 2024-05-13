@@ -1,0 +1,40 @@
+{
+  "citas": [
+    {
+      "id": "1",
+      "fechaHora": "2022-06-09T10:00",
+      "motivo": "Consulta generalisima",
+      "doctor": {
+        "especialidad": "GENERAL"
+      },
+      "paciente": {
+        "id": "1",
+        "nombre": "John Doe"
+      }
+    },
+    {
+      "id": "1",
+      "fechaHora": "2022-06-09T10:00",
+      "motivo": "Consulta generalisima",
+      "doctor": {
+        "especialidad": "GENERAL"
+      },
+      "paciente": {
+        "id": "1",
+        "nombre": "John Doe"
+      }
+    },
+    {
+      "id": "3",
+      "fechaHora": "2023-06-09T10:00",
+      "motivo": "Consulta de rompedur de algo",
+      "doctor": {
+        "especialidad": "GENERAL"
+      },
+      "paciente": {
+        "id": "2",
+        "nombre": "kevin"
+      }
+    }
+  ]
+}
